@@ -356,3 +356,36 @@ footer {
   }
 
 }
+
+/* ページ切り替え */
+
+.shop-page {
+  display: none;
+}
+
+.page-header {
+  text-align: center;
+  padding: 80px 20px 45px;
+  background: linear-gradient(180deg, #eeebff, #faf9ff);
+}
+
+.page-header p {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #8175b5;
+}
+
+.page-header h1 {
+  font-size: 48px;
+  color: #6659a3;
+  margin: 10px 0;
+}
+
+.page-header span {
+  color: #77718a;
+  font-size: 14px;
+}
+
+.shop-page .products {
+  padding-top: 60px;
+}
