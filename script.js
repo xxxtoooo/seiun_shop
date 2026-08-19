@@ -78,3 +78,38 @@ function filterItems(category) {
 
   });
 }
+
+function showPage(page) {
+
+  const pages = [
+    "home-page",
+    "goods-page",
+    "voice-page",
+    "digital-page"
+  ];
+
+  pages.forEach(id => {
+    document.getElementById(id).style.display = "none";
+  });
+
+  if (page === "home") {
+    document.getElementById("home-page").style.display = "block";
+  }
+
+  if (page === "goods") {
+    document.getElementById("goods-page").style.display = "block";
+  }
+
+  if (page === "voice") {
+    document.getElementById("voice-page").style.display = "block";
+  }
+
+  if (page === "digital") {
+    document.getElementById("digital-page").style.display = "block";
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
