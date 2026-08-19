@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>せいうんしょっぷ｜星雲公式オンラインショップ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      ☁️ <span>せいうんしょっぷ</span>
+    </div>
+
+    <nav>
+      <a href="#new">NEW</a>
+      <a href="#goods">GOODS</a>
+      <a href="#voice">VOICE</a>
+      <a href="#digital">DIGITAL</a>
+    </nav>
+
+    <button class="cart-button" onclick="openCart()">
+      🛒 カート <span id="cart-count">0</span>
+    </button>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+      <p class="hero-small">SEIUN OFFICIAL ONLINE SHOP</p>
+
+      <h1>せいうんしょっぷ</h1>
+
+      <p>
+        星雲所属タレントの<br>
+        公式グッズ・ボイスをお届けします ☁️✨
+      </p>
+
+      <div class="free-banner">
+        ✦ ALL ITEMS ¥0 ✦
+      </div>
+    </section>
+
+
+    <section class="category">
+      <h2>CATEGORY</h2>
+
+      <div class="category-buttons">
+        <button onclick="filterItems('all')">ALL</button>
+        <button onclick="filterItems('goods')">GOODS</button>
+        <button onclick="filterItems('voice')">VOICE</button>
+        <button onclick="filterItems('digital')">DIGITAL</button>
+      </div>
+    </section>
+
+
+    <section id="new" class="products">
+      <div class="section-title">
+        <p>NEW ARRIVAL</p>
+        <h2>新着アイテム</h2>
+      </div>
+
+      <div class="product-grid">
+
+        <article class="product-card" data-category="goods">
+          <div class="product-image">🧸</div>
+          <span class="tag">NEW</span>
+          <h3>星雲オリジナル アクリルスタンド</h3>
+          <p class="price">¥0 <small>（税込）</small></p>
+          <button onclick="addToCart('星雲オリジナル アクリルスタンド')">
+            🛒 カートに入れる
+          </button>
+        </article>
+
+
+        <article class="product-card" data-category="goods">
+          <div class="product-image">📛</div>
+          <span class="tag">NEW</span>
+          <h3>星雲ランダム缶バッジ</h3>
+          <p class="price">¥0 <small>（税込）</small></p>
+          <button onclick="addToCart('星雲ランダム缶バッジ')">
+            🛒 カートに入れる
+          </button>
+        </article>
+
+
+        <article class="product-card" data-category="voice">
+          <div class="product-image">🎙️</div>
+          <span class="tag">VOICE</span>
+          <h3>おはようボイス 2026</h3>
+          <p class="price">¥0 <small>（税込）</small></p>
+          <button onclick="addToCart('おはようボイス 2026')">
+            🛒 カートに入れる
+          </button>
+        </article>
+
+
+        <article class="product-card" data-category="digital">
+          <div class="product-image">📱</div>
+          <span class="tag">DIGITAL</span>
+          <h3>星雲オリジナルスマホ壁紙</h3>
+          <p class="price">¥0 <small>（税込）</small></p>
+          <button onclick="addToCart('星雲オリジナルスマホ壁紙')">
+            🛒 カートに入れる
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="notice">
+      <h2>☁️ SHOP INFORMATION</h2>
+
+      <p>
+        せいうんしょっぷの商品はすべて無料です。
+      </p>
+
+      <p>
+        ※本サイトは架空のオンラインショップです。<br>
+        実際の商品発送・決済は発生しません。
+      </p>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>© 星雲 - SEIUN -</p>
+    <p>せいうんしょっぷ</p>
+  </footer>
+
+
+  <!-- カート -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+
+      <button class="close" onclick="closeCart()">×</button>
+
+      <h2>🛒 カート</h2>
+
+      <div id="cart-items">
+        <p>カートは空です。</p>
+      </div>
+
+      <div class="cart-total">
+        合計：<strong>¥0</strong>
+      </div>
+
+      <button class="order-button" onclick="orderComplete()">
+        注文内容を確認する
+      </button>
+
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
